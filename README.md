@@ -3,13 +3,12 @@
 To install this package you need:
 
 1. Download mapplanner library: https://github.com/cog-isa/map-planner.git
-2. Checkout to multiMAP branch
-3. Install it
-4. cd to folder on your PC with this project
-5. python3 setup.py install
-6. Install Crumb project: http://babel.isa.uma.es/crumb/index.php/category/work/ros-simulator/
-7. Load in Gazebo crumb_pick_place.world
-8. Start any GazeboAgent task
+2. Checkout&Install to multiMAP branch
+3. cd to folder on your PC with this project
+4. python3 setup.py install
+5. Install https://github.com/ermekaitygulov/gym-crumb.git
+6. Load in Gazebo crumb_pick_place.world
+7. Start any GazeboAgent task
 
 
 ```python
@@ -20,7 +19,7 @@ if __name__ == '__main__':
    planner = MapPlanner('src/benchmarks/spatial/', '2', gazebo = True,
                     agpath = 'gazeboplanner.CrumbAgent', agtype = 'GazeboAgent')
    solution = planner.searcher()
-   
+
 #This lib includes a small kit of test benchmarks. Use them like following:
 
 import pkg_resources
